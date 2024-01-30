@@ -1,0 +1,11 @@
+@use "base/variables";
+@use "base/mixins";
+
+.estadisticas {
+  padding: 5rem 0;
+}
+.estadisticas-texto {
+  h2 {
+    @include mixins.headings(variables.$secundario, variables.$primario);
+  }
+}

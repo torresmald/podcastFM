@@ -1,0 +1,21 @@
+@use "base/variables";
+@use "base/mixins";
+
+.crea-contenido {
+  @include mixins.tablet {
+    display: flex;
+    align-items: center;
+    padding: 5rem 0;
+    gap: 4rem;
+  }
+}
+.crea-imagen {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 0 4rem 0;
+}
+.crea-texto {
+  h2 {
+    @include mixins.headings(variables.$secundario, variables.$primario);
+  }
+}

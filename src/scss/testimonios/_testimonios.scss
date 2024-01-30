@@ -1,0 +1,59 @@
+@use "base/variables";
+@use "base/mixins";
+
+.testimonios {
+  padding: 5rem 0;
+  h2 {
+    @include mixins.headings(variables.$secundario, variables.$primario);
+  }
+  @include mixins.tablet {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+  }
+}
+
+.testimonios-imagen {
+  margin-bottom: 4rem;
+  img {
+    margin: 0 auto;
+    @include mixins.tablet {
+      width: 100%;
+    }
+  }
+}
+.testimonios-contenido {
+  @include mixins.tablet {
+    max-width: 60%;
+    .testimonio:nth-child(2) {
+      margin-left: 5rem;
+    }
+    .testimonio:nth-child(3) {
+      margin-left: 10rem;
+    }
+    .testimonio:nth-child(4) {
+      margin-left: 15rem;
+    }
+  }
+}
+.testimonio {
+  border: 5px solid variables.$secundario;
+  padding: 2rem;
+  margin-bottom: 5rem;
+  border-radius: 2rem;
+  background-color: variables.$primario;
+  position: relative;
+  p {
+    margin-left: 5rem;
+  }
+  p::before {
+    background-image: url(../img/comilla.svg);
+    background-repeat: no-repeat;
+    content: "";
+    width: 5rem;
+    height: 5rem;
+    display: inline-block;
+    position: absolute;
+    left: 1rem;
+  }
+}

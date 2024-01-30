@@ -1,0 +1,52 @@
+@use "base/variables";
+@use "base/mixins";
+
+.footer {
+  background-color: variables.$secundario;
+}
+
+.footer-logo {
+  margin: 0 auto;
+  width: 50%;
+  margin-bottom: 5rem;
+  @include mixins.tablet { 
+    margin: 0;
+    width: 20%;
+  }
+}
+.footer-contenido {
+  padding: 5rem 0;
+  @include mixins.tablet { 
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 5rem;
+  }
+}
+.widgets{
+    @include mixins.tablet { 
+        display: flex;
+        gap: 5rem;
+    }
+}
+.widget {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  a {
+    margin-bottom: 1rem;
+    color: variables.$blanco;
+  }
+  h3 {
+    color: variables.$primario;
+  }
+}
+
+.copyright {
+  font-size: 1.2rem;
+  color: variables.$blanco;
+  margin: 0;
+  border-top: 2px solid variables.$primario;
+  text-align: center;
+  padding: 1rem 0;
+}

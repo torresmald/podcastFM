@@ -1,0 +1,39 @@
+@use 'base/variables';
+@use 'base/mixins';
+
+.site-header{
+    background-image: linear-gradient(variables.$secundarioOpacity 0%, variables.$secundarioOpacity 100%), url('../img/header.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    @include mixins.tablet { 
+        background-position: top;
+    }
+}
+.header-grid{
+    padding: 5rem 0;
+}
+.logo{
+    margin: auto;
+    width: 20rem;
+    @include mixins.tablet { 
+        margin: 0;
+    }
+}
+.contenido-header{
+    color: variables.$blanco;
+    padding: 10rem 0;
+    a{
+        @include mixins.boton(variables.$primario, variables.$secundario) 
+    }
+    h1{
+        font-size: 4.5rem;
+    }
+    @include mixins.tablet { 
+        padding: 15rem 0;
+        width: 50%;
+        h1{
+            font-size: 6rem;
+        }
+    }
+}

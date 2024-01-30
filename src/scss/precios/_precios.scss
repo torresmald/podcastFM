@@ -1,0 +1,107 @@
+@use "base/variables";
+@use "base/mixins";
+
+.precios {
+  background-color: variables.$secundario;
+  padding: 5rem 0;
+  h2 {
+    @include mixins.headings(variables.$blanco, variables.$primario);
+  }
+  .descripcion {
+    color: variables.$blanco;
+  }
+}
+
+.planes {
+  display: flex;
+  flex-direction: column;
+  @include mixins.tablet {
+    flex-direction: row;
+    padding: 5rem 0;
+  }
+}
+
+.plan {
+  background-color: variables.$blanco;
+  width: 100%;
+  padding: 4rem 0;
+  text-align: center;
+  border-bottom: 1px solid #e1e1e1;
+  padding: 16rem 4rem 4rem;
+  .precio {
+    font-weight: 900;
+  }
+  .listado {
+    li {
+      margin: 2rem 0;
+    }
+  }
+}
+.negocio {
+  order: -1;
+  @include mixins.tablet {
+    order: unset;
+    border-radius: 2rem;
+    margin: -5rem 0;
+  }
+  @include mixins.iconos("../img/icono_negocio.svg", variables.$primario);
+  button {
+    cursor: pointer;
+    padding: 1rem 2rem;
+    width: 100%;
+    background-color: transparent;
+    border: 2px solid variables.$blanco;
+    font-size: 2rem;
+    color: variables.$secundario;
+    font-weight: 900;
+    @include mixins.tablet { 
+        width: auto;
+    }
+  }
+  button:hover {
+    background-color: #5dcda7;
+    transition: background-color ease-in 300ms;
+  }
+}
+
+.inicio {
+  @include mixins.iconos("../img/icono_inicio.svg", variables.$blanco);
+  button {
+    cursor: pointer;
+    padding: 1rem 2rem;
+    width: 100%;
+    margin: 0 auto;
+    background-color: variables.$primario;
+    font-size: 2rem;
+    color: variables.$secundario;
+    font-weight: 900;
+    border: 0;
+    @include mixins.tablet { 
+        width: auto;
+    }
+  }
+  button:hover {
+    background-color: #5dcda7;
+    transition: background-color ease-in 300ms;
+  }
+}
+.pro {
+  @include mixins.iconos("../img/icono_pro.svg", variables.$blanco);
+  button {
+    cursor: pointer;
+    padding: 1rem 2rem;
+    width: 100%;
+    background-color: variables.$primario;
+    font-size: 2rem;
+    color: variables.$secundario;
+    font-weight: 900;
+    border: 0;
+    @include mixins.tablet { 
+        width: auto;
+    }
+  }
+  button:hover {
+    background-color: #5dcda7;
+    transition: background-color ease-in 300ms;
+  }
+}
